@@ -1,0 +1,151 @@
+.scheduleCard {
+  background: var(--glass-surface-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border-light);
+  border-radius: var(--radius-card);
+  padding: 30px 36px;
+  box-shadow: var(--glass-shadow), var(--glass-inner-highlight), var(--glass-inner-bevel);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 260px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.scheduleCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1.5px;
+  background: var(--glass-specular-top);
+}
+
+.scheduleCard:hover {
+  box-shadow: var(--glass-shadow-hover), var(--glass-inner-highlight);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.seeAllLink {
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: var(--color-neon-cyan);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.seeAllLink:hover {
+  color: #93C5FD;
+  transform: translateX(2px);
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scheduleItem {
+  padding: 10px 14px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-radius: 0 12px 12px 0;
+  background: rgba(255, 255, 255, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: all 0.25s ease;
+}
+
+.scheduleItem:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.itemTitle {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+
+.itemTime {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.itemLocation {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.emptyState {
+  padding: 24px 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.addScheduleBtn {
+  align-self: flex-start;
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.25);
+  border: 1px solid rgba(129, 140, 248, 0.45);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
+  transition: all 0.25s ease;
+}
+
+.addScheduleBtn:hover {
+  background: rgba(99, 102, 241, 0.4);
+  border-color: var(--color-neon-cyan);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .scheduleCard {
+    padding: 24px 20px;
+  }
+}

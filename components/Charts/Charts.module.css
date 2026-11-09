@@ -1,0 +1,273 @@
+.chartCard {
+  background: var(--glass-surface-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border-light);
+  border-radius: var(--radius-card);
+  padding: 30px 36px;
+  box-shadow: var(--glass-shadow), var(--glass-inner-highlight), var(--glass-inner-bevel);
+  margin-bottom: 36px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.chartCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1.5px;
+  background: var(--glass-specular-top);
+}
+
+.chartCard:hover {
+  box-shadow: var(--glass-shadow-hover), var(--glass-inner-highlight);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chartTitle {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+.periodDropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  padding: 5px 12px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.periodDropdown:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--glass-border-light);
+}
+
+.periodSelect {
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  outline: none;
+  padding-right: 4px;
+}
+
+.periodSelect option {
+  background-color: #0F172A;
+  color: #FFFFFF;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.legendDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 250px;
+}
+
+/* Glass Tooltip */
+.customTooltip {
+  background: rgba(14, 21, 38, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), var(--glass-inner-highlight);
+  border: 1px solid var(--glass-border-light);
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.tooltipLabel {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 4px;
+}
+
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Top Products Glass Styles */
+.productsCard {
+  background: var(--glass-surface-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border-light);
+  border-radius: var(--radius-card);
+  padding: 30px 36px;
+  box-shadow: var(--glass-shadow), var(--glass-inner-highlight), var(--glass-inner-bevel);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 260px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.productsCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1.5px;
+  background: var(--glass-specular-top);
+}
+
+.productsCard:hover {
+  box-shadow: var(--glass-shadow-hover), var(--glass-inner-highlight);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.productsBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.pieWrapper {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productsLegendList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+  padding-left: 10px;
+}
+
+.productLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+}
+
+.productLegendItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateX(3px);
+}
+
+.productDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.productName {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.productPercent {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-neon-cyan);
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .chartCard, .productsCard {
+    padding: 24px 20px;
+  }
+  .headerRight {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .chartHeader {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .headerRight {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .productsBody {
+    flex-direction: column;
+    align-items: center;
+  }
+  .productsLegendList {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 14px;
+  }
+}

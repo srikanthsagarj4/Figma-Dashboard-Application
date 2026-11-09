@@ -1,0 +1,166 @@
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+.card {
+  border-radius: var(--radius-card);
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 136px;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border-light);
+  box-shadow: var(--glass-shadow), var(--glass-inner-highlight), var(--glass-inner-bevel);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--glass-specular-top);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glass-shadow-hover), var(--glass-inner-highlight);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Chromatic Glass Variants */
+.cardRevenue {
+  background: var(--glass-revenue-bg);
+  border-color: var(--glass-revenue-border);
+}
+
+.cardRevenue:hover {
+  box-shadow: 0 16px 40px var(--glass-revenue-glow), var(--glass-inner-highlight);
+}
+
+.cardTransactions {
+  background: var(--glass-transaction-bg);
+  border-color: var(--glass-transaction-border);
+}
+
+.cardTransactions:hover {
+  box-shadow: 0 16px 40px var(--glass-transaction-glow), var(--glass-inner-highlight);
+}
+
+.cardLikes {
+  background: var(--glass-likes-bg);
+  border-color: var(--glass-likes-border);
+}
+
+.cardLikes:hover {
+  box-shadow: 0 16px 40px var(--glass-likes-glow), var(--glass-inner-highlight);
+}
+
+.cardUsers {
+  background: var(--glass-users-bg);
+  border-color: var(--glass-users-border);
+}
+
+.cardUsers:hover {
+  box-shadow: 0 16px 40px var(--glass-users-glow), var(--glass-inner-highlight);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.cardLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.01em;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--glass-inner-highlight);
+  transition: transform 0.2s ease;
+}
+
+.card:hover .iconContainer {
+  transform: scale(1.08);
+}
+
+.bottomRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.cardValue {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  backdrop-filter: blur(6px);
+  box-shadow: var(--glass-inner-highlight);
+}
+
+/* Responsive Grid */
+@media (max-width: 1200px) {
+  .cardsGrid {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  .card {
+    padding: 18px 20px;
+  }
+  .cardValue {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .card {
+    min-height: 110px;
+  }
+}

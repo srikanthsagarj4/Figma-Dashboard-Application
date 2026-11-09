@@ -1,0 +1,124 @@
+.tableContainer {
+  background: var(--glass-surface-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border-light);
+  border-radius: var(--radius-card);
+  padding: 30px;
+  box-shadow: var(--glass-shadow), var(--glass-inner-highlight), var(--glass-inner-bevel);
+  overflow-x: auto;
+  position: relative;
+}
+
+.tableContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1.5px;
+  background: var(--glass-specular-top);
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.filterControls {
+  display: flex;
+  gap: 12px;
+}
+
+.select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-button);
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #FFFFFF;
+  outline: none;
+  backdrop-filter: blur(8px);
+}
+
+.select option {
+  background: #0F172A;
+  color: #FFFFFF;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.th {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--glass-border);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.td {
+  padding: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--color-text-secondary);
+  transition: all 0.2s ease;
+}
+
+.tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tr:hover .td {
+  color: #FFFFFF;
+}
+
+.badgeSuccess {
+  background: rgba(52, 211, 153, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: var(--chart-user-green);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.2);
+}
+
+.badgePending {
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  color: var(--chart-slice-pants);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.2);
+}
+
+.badgeFailed {
+  background: rgba(251, 113, 133, 0.15);
+  border: 1px solid rgba(251, 113, 133, 0.35);
+  color: var(--chart-guest-pink);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(251, 113, 133, 0.2);
+}
