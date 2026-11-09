@@ -1,88 +1,21 @@
-# Board. — Unique Transparent Glass UI Analytics Dashboard
+ Project Overview (Intro Paragraph for GitHub README)
 
-A futuristic, responsive Dashboard Web Application built with **Next.js 14 (App Router)**, **JavaScript (ES6+)**, **Custom CSS & CSS Modules** featuring a **Transparent Glass UI (Glassmorphic) Design System**, **NextAuth.js** with Google OAuth & Demo authentication, **Recharts**, and **Axios**.
+Board. is a modern, responsive web application engineered to transform the classic Figma Front-End Developer assessment into an executive-grade analytics platform. Built strictly with Next.js 14 (App Router), JavaScript (ES6+), and Pure Custom CSS Modules (with zero external CSS frameworks like Bootstrap, Tailwind, or Material UI), the application pairs pixel-level design precision with a bespoke Transparent Glass (Glassmorphism) design system. Featuring real Google OAuth 2.0 authentication via NextAuth.js, dynamic data fetching via Axios and Next.js API route handlers, interactive Recharts visualizations, and full cross-device responsiveness, this project bridges high-fidelity UI/UX design with production-ready software engineering.
 
----
-
-## 💎 Transparent Glass UI & Unique Interface Architecture
-
-The application has been transformed into a transparent frosted glass experience:
-
-1. **Atmospheric Aurora Mesh & Background Refraction**:
-   - Multi-layer fluid ambient light blobs (`blur(80px)` - `blur(90px)`) floating in indigo, cyan, emerald, and rose that refract dynamically through all translucent glass surfaces.
-   - Deep twilight canvas (`#070B14`) creating high specular contrast and visual depth.
-
-2. **Ultra-Refractive Glass Panels**:
-   - Frosted crystal glass surfaces (`backdrop-filter: blur(24px) saturate(190%)`).
-   - Specular rim highlights with top gradient bounce (`linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent)`).
-   - Inner bevel reflections (`inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.2)`).
-
-3. **Unique Chromatic Glass Stat Cards**:
-   - **Total Revenues**: Emerald neon glass (`rgba(16, 185, 129, 0.18)`) with green ambient glow.
-   - **Total Transactions**: Amber neon glass (`rgba(245, 158, 11, 0.18)`) with gold ambient glow.
-   - **Total Likes**: Rose neon glass (`rgba(244, 63, 94, 0.18)`) with coral ambient glow.
-   - **Total Users**: Electric Indigo neon glass (`rgba(99, 102, 241, 0.18)`) with purple ambient glow.
-   - Floating frosted icon capsules with specular glass rims.
-
-4. **Luminous Neon Recharts**:
-   - **Activities**: Smoothed spline area curves with translucent illuminated gradient fills (`#34D399` for Users and `#FB7185` for Guests) and glowing active dots.
-   - **Top Products**: Glass donut chart with center cutout (`innerRadius={46}`) and illuminated percentage chips.
-   - **Glass Tooltips**: Floating frosted glass cards with glowing indicator dots and backdrop blur.
-
-5. **Floating Glass Capsule Navigation**:
-   - **Floating Pill Sidebar**: Frosted glass panel with `border: 1px solid rgba(255, 255, 255, 0.22)`, glowing active pill with cyan neon indicator (`box-shadow: 0 0 10px #38BDF8`).
-   - **Capsule Search**: Translucent glass search bar that expands with a cyan glow on focus.
-   - **Glass Modals**: Frosted backdrop blur with floating glass dialogs for adding schedules and reviewing meetings.
-
-6. **Glass Portal Sign-In Screen**:
-   - Translucent split-screen portal with glowing metallic typography.
-   - Frosted glass card with glowing input fields and glass-sheen OAuth buttons for Google and Apple.
-
----
-
-## 🛠️ Technology Stack
-
-| Layer | Technology |
-|---|---|
-| **Framework** | Next.js 14 (App Router) |
-| **Language** | JavaScript (ES6+) |
-| **Theme / UI** | Custom CSS3 / CSS Modules / Glassmorphism (No frameworks) |
-| **Authentication** | NextAuth.js v4 (Google OAuth + Demo Credentials) |
-| **Charts** | Recharts v2 (Custom Glowing Gradients) |
-| **Icons** | Lucide React |
-| **HTTP Client** | Axios |
-
----
-
-## ⚙️ Installation & Running Locally
-
-### 1. Install Dependencies
-```bash
-npm install
-```
-
-### 2. Environment Variables
-Provided in `.env.example` and `.env.local`:
-```env
-GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=board_secret_development_token_394827591823759
-```
-
-### 3. Start Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### 4. Production Build & Start
-```bash
-npm run build
-npm start
-```
-
-### 5. Instant Evaluation
-- Open `/login`.
-- Click **"Sign In"** for immediate 1-click evaluation with the pre-filled demo account (`johndoe@gmail.com`).
-- Or click **"Sign in with Google"** for Google OAuth authentication.
+ Brief Project Explanation & Highlights (To paste in GitHub README)
+1. 🎯 Origin & Design Execution
+Figma Reference: Faithfully replicates the layout, spacing, typography, colors, and components from the official Figma dashboard and sign-in frames.
+Pure Custom CSS/SCSS: Styled entirely from scratch using CSS3 custom properties, CSS Grid, and Flexbox without depending on third-party component libraries.
+Visual Elevation: Upgraded with a refractive Transparent Glass UI, featuring floating specular pill navigation, ambient fluid mesh lighting, and illuminated neon accent tokens.
+2. 🔐 Authentication & Session Security
+Google OAuth 2.0 Integration: Authenticates users using NextAuth.js (Auth.js) and displays real Google profile names and avatars.
+1-Click Demo Evaluation: Includes a pre-configured credentials provider so recruiters and evaluators can test the entire dashboard without needing manual GCP cloud keys.
+Route Guards: Protected via Next.js Edge Middleware (middleware.js), preventing unauthorized access to the dashboard.
+3. 📊 Interactive Visualizations & Live Filtering
+Activities Spline Chart: Dual-series area chart comparing Guest and User metrics with smooth curves, illuminated SVG gradient fills, and custom tooltips.
+Top Products Donut Chart: High-contrast distribution chart reflecting sales percentages (Basic Tees 55%, Custom Short Pants 31%, Super Hoodies 14%).
+Dynamic Period Filters: Interactive period selector dropdowns (May - June 2021, July - August 2021, September - October 2021) that update charts and statistics in real time.
+4. 🌐 API Service Architecture & Interactivity
+Next.js API Handler (/api/dashboard): REST endpoint serving key performance statistics, activities datasets, top products, and scheduled events.
+Axios Service Layer: Modular API service with timeout protection, loading spinners, and automatic fallbacks.
+Working Elements: Real-time keyword search filter, notification dropdown, interactive schedule creator modal, and responsive mobile drawer menu.
