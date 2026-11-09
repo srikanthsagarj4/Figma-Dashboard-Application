@@ -1,8 +1,8 @@
- Project Overview (Intro Paragraph for GitHub README)
+ Project Overview 
 
 Board. is a modern, responsive web application engineered to transform the classic Figma Front-End Developer assessment into an executive-grade analytics platform. Built strictly with Next.js 14 (App Router), JavaScript (ES6+), and Pure Custom CSS Modules (with zero external CSS frameworks like Bootstrap, Tailwind, or Material UI), the application pairs pixel-level design precision with a bespoke Transparent Glass (Glassmorphism) design system. Featuring real Google OAuth 2.0 authentication via NextAuth.js, dynamic data fetching via Axios and Next.js API route handlers, interactive Recharts visualizations, and full cross-device responsiveness, this project bridges high-fidelity UI/UX design with production-ready software engineering.
 
- Brief Project Explanation & Highlights (To paste in GitHub README)
+ Brief Project Explanation & Highlights 
 1. 🎯 Origin & Design Execution
 Figma Reference: Faithfully replicates the layout, spacing, typography, colors, and components from the official Figma dashboard and sign-in frames.
 Pure Custom CSS/SCSS: Styled entirely from scratch using CSS3 custom properties, CSS Grid, and Flexbox without depending on third-party component libraries.
